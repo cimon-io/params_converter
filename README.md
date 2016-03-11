@@ -60,6 +60,8 @@ ParamsConverter.convert!({ a: 1, 'b' => 2, c: 3, d: 4 }, [], nil)
 
 ```
 
+It should support all versions of ruby, but only ruby 2.1+ is guaranteed.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
