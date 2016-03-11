@@ -1,12 +1,32 @@
 # ParamsConverter
 
-Advanced version of `assert_valid_keys` method. This gem allow to check keys which must be present and can be present. Also it symbolize keys. There are no dependencies. Usage:
+Advanced version of `assert_valid_keys` method. This gem allow to check keys which must be present and can be present. Also it symbolize keys. There are no dependencies.
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'params_converter'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install params_converter
+
+## Usage
+
+This is function without side effects and it's not modify existing hash, but returns new one. The signature of `convert!` method the following:
 
 ```ruby
 ParamsConverter.convert!(hash, required_keys, allowed_keys)
 ```
 
-Examples:
+There are a few examples:
 
 ```ruby
 ParamsConverter.convert!({ a: 1, b: 2, 'c' => 3, d: 4 }, [:a, 'b'], ['c', :d])
@@ -39,28 +59,6 @@ ParamsConverter.convert!({ a: 1, 'b' => 2, c: 3, d: 4 }, [], nil)
 # raises ParamsConverter::NotAllowedError
 
 ```
-
-It's not modify existing hash, but returns new one.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'params_converter'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install params_converter
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
