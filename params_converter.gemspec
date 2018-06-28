@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Rich version of assert_valid_keys method}
   spec.description   = %q{Rich version of assert_valid_keys method}
   spec.homepage      = "https://github.com/cimon-io/params_converter"
+  spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
